@@ -3,13 +3,21 @@
 <html>
     <head>
         <title>Limco Logistics</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="firstPage.css">
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete"
+        async
+        defer
+        ></script>
+
     </head>
 
     <body>
         <div class="first-page">
             <nav>
                 <ul class="menu">
+                    <img class="logo" alt="logo1" src="img\logo-blue-1.svg">
                     <li class="dropdown">
                         <a href="#" class="option">Ocean Freight</a>
                         <ul class="dropdown-menu">
@@ -21,29 +29,103 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="option">Services</a>
+                        <a href="#" class="option">Air Freight</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" class="options">Consulting</a></li>
-                            <li><a href="#" class="options">Support</a></li>
-                            <li><a href="#" class="options">Management</a></li>
+                            <li><a href="#" class="options">Delivered-at-Place (DAP) Service</a></li>
+                            <li><a href="#" class="options">Delivery Duty Paid (DDP) Service</a></li>
+                            <li><a href="#" class="options">Air Cargo Calculation</a></li>
+                            <li><a href="#" class="options">Airway Bill (AWB) Companu Grossary</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="option">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="option">Resource Center</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="options">Bill of Landigng Termms</a></li>
+                            <li><a href="#" class="options">Incoterms</a></li>
+                            <li><a href="#" class="options">ACH Payment Form</a></li>
+                            <li><a href="#" class="options">Agent Portal</a></li>
+                            <li><a href="#" class="options">Customer Portal</a></li>
+                            <li><a href="#" class="options">Customer Stories</a></li>
+                            <li><a href="#" class="options">LTL Rate Search</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="option">About us</a></li>
+                    <li><a href="#" class="option">Contact Us</a></li>
+                    <li><a href="#" class="option"></a>Blog</li>
+                    <div class="yep"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="yep"><i class="fa-solid fa-phone"></i></div>
+
+                    <li class="dropdown">
+                        <a href="#" class="option">ENG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="options">ESP</a></li>
+                            <li><a href="#" class="options">RUS</a></li>
+                        </ul>
+                    </li>
+
+                    <button class="nav-button">Track Shipment</button>
                 </ul>
             </nav>
 
-            <div class="background">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-        </div>
+            <hr class="hr1">
 
+            <div class="services">
+                <p class="p1">Agricultural Industry</p>
+                <p class="p1">Pet Industry</p>
+                <p class="p1">Automotive Industry</p>
+                <p class="p1">Oil and Gas</p>
+                <p class="p1">Relief Goods</p>
+                <p class="p1">Construction Machinery</p>
+            </div>
+
+            <div class="background">
+                <div class="floating elements">
+                    <img class="boat-pic" src="img/ocean-freight.webp" alt="boat">
+                    <div class="circle circle1"></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                    <div class="circle circle4"></div>
+                    <div class="circle circle5"></div>
+                </div>
+            </div>
+
+            <div class="big-text">
+                <p class="paragraph1">International Cargo Shipping Company</p>
+                <p class="paragraph1">with Affordable Rates</p>
+            </div>
+
+            <div class="the-biggest">
+                <h1 class="head">Ocean Freight</h1>
+                <p class="paragraph2">At Limco Logistics, we don’t just move marine cargo; we navigate challenges and opportunities on the vast seas. Our commitment to excellence in ocean freight services is unwavering. Specializing in tailored solutions, we ensure your goods not only reach their destination but do so with precision and timeliness.</p>
+            </div>
+
+            <div class="buttons">
+                <button class="ocean-flc">Ocean FLC</button>
+                <button class="ocean-lcl">Ocean LCL</button>
+                <button class="ocean-roro">Ocean RORO</button>
+                <button class="car-shipping">Car Shiping</button>
+                <button class="air">Air</button>
+            </div>
+
+            <form class="shipping-form">
+                <div class="form-group">
+                    <label for="origin" class="or"><i class="fa-solid fa-earth-europe"></i> Origin</label>
+                    <input type="text" id="origin" name="origin" placeholder="Origin for Ocean LFC" required class="pl">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination" class="or"><i class="fa-solid fa-earth-europe"></i> Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Destination for Ocean LFC" required class="pl">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cargo" class="or"><i class="fa-solid fa-earth-europe"></i> Cargo</label>
+                    <input type="text" id="cargo" name="cargo" placeholder="Enter cargo description" required class="pl">
+                </div>
+                
+                <button type="submit" class="submit-btn">Search Rates</button>
+            </form>
+        </div>
+        <script src="firstPage.js"></script>
     </body>
 </html>

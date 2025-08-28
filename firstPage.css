@@ -8,17 +8,21 @@
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 nav {
     background-color: #03132c;
     padding: 15px 50px;
+    width: 100%;
 }
 
 .menu {
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
+    margin-left: 50px;
 }
 
 .menu li {
@@ -44,6 +48,42 @@ nav {
     font-size: 14px;
 }
 
+.yep {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;   
+    background-color: transparent;  
+    border: 2px solid white;
+    display: flex;          
+    align-items: center;      
+    justify-content: center;  
+    cursor: pointer;   
+}
+
+.yep i {
+    font-size: 14px;
+    color: white;
+}
+
+.nav-button {
+    background-color: transparent;
+    border-radius: 25px;
+    border-color: #fff;
+    width: 150px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.4s ease; 
+    outline: none;
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: black
+}
+
+
 .dropdown-menu {
     opacity: 0;                   
     transform: translateY(-10px); 
@@ -55,10 +95,10 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 180px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: opacity 0.4s ease, transform 0.4s ease;
+    min-width: 300px;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -105,10 +145,10 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 760px;
     overflow: hidden;
-    z-index: -1;
     background-color: #03132c;
+    z-index: -1;
 }
 
 .circle {
@@ -119,6 +159,7 @@ nav {
     border: 2px solid rgba(0, 123, 255, 0.8); 
     background-color: transparent; 
     animation: float 6s infinite ease-in-out;
+    z-index: 3;
 }
 
 @keyframes float {
@@ -130,78 +171,188 @@ nav {
     }
 }
 
-
-.circle:nth-child(1) {
-    top: 30%;
-    left: 20%;
-    animation-delay: 0s;
-    width: 50px;
-    height: 50px;
+.hr1 {
+    height: 0.1px;
+    width: 1340px;
+    margin-top: 10px;
+    margin-left: 100px;
+    background-color: rgba(0, 191, 255, 0.3);
+    border: none;
 }
 
-.circle:nth-child(2) {
-    top: 30%;
-    left: 40%;
-    animation-delay: 1s;
-    width: 150px;
-    height: 150px;
+.services {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1340px;
+    margin: 0 auto; 
+    padding: 20px 0;
+    gap: 10px;
+    margin-top: -10px;
 }
 
-.circle:nth-child(3) {
-    top: 50%;
-    left: 15%;
-    animation-delay: 2s;
-    height: 200px;
-    width: 200px;
+.services .p1 {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.4s ease; 
+    font-size: 16px;
 }
 
-.circle:nth-child(4) {
-    top: 40%;
-    left: 30%;
-    animation-delay: 3s;
+.services .p1:hover {
+    color: #82C8E5;
+}
+
+.big-text {
+    position: relative;
+    left: 100px;
+    top: 70px;
+}
+
+.paragraph1 {
+    color: #82C8E5;
+    font-size: 22px;
+}
+
+.the-biggest {
+    position: relative;
+    left: 90px;
+    top: 100px;
+}
+
+.head {
+    color: white;
+    font-size: 90px;
+}
+
+.paragraph2{
+    color: white;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.boat-pic {
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 150px;
+    height: 500px;
+    width: 500px;
+    z-index: 2;
+}
+.floating-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.circle1 { top: 30%; left: 60%; width:50px; height:50px; }
+.circle2 { top: 50%; left: 55%; width:150px; height:150px; }
+.circle3 { top: 20%; left: 85%; width:200px; height:200px; }
+.circle4 { top: 80%; left: 60%; width:50px; height:50px; }
+.circle5 {top: 70%; left: 90%; width: 75px; height: 75px;}
+
+.buttons {
+    position: relative;
+    top: 200px;
+    left: 100px;
+    gap: 10px;
+    display: flex;
+}
+
+.ocean-flc, .ocean-lcl, .ocean-roro, .car-shipping, .air {
     width: 100px;
-    height: 100px;
-
-}
-
-.circle:nth-child(5) {
-    top: 60%;
-    left: 50%;
-    animation-delay: 4s;
-    width: 150px;
-    height: 150px;
-}
-
-.circle:nth-child(6) {
-    top: 60%;
-    left: 37%;
-    animation-delay: 5s;
-    width: 75px;
-    height: 75px;
-}
-
-.circle:nth-child(7) {
-    top: 30%;
-    left: 5%;
-    animation-delay: 5s;
-    width: 150px;
-    height: 150px;
-}
-
-.circle:nth-child(8) {
-    top: 60%;
-    left: 2%;
-    animation-delay: 5s;
-    width: 100px;
-    height: 100px;
-}
-.circle:nth-child(9) {
-    top: 55%;
-    left: 45%;
-    animation-delay: 5s;
-    width: 50px;
     height: 50px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.4s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
 }
+.ocean-flc:hover, .ocean-lcl:hover, .ocean-roro:hover, .car-shipping:hover, .air:hover {
+    background-color: #048bc5;
+    color: white;
+}
+
+.ocean-roro {
+    width: 110px;
+}
+
+.car-shipping {
+    width: 110px;
+}
+.air {
+    width: 50px;
+}
+
+.shipping-form {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
+  margin-left: 80px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 400px;
+  height: 80px;
+  border-radius: 10px;
+}
+.pl {
+    margin-top: 10px;
+}
+
+.or {
+    margin-left: 10px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+input:focus, select:focus {
+  border-color: #82C8E5;
+}
+
+.submit-btn {
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #03132c;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #82C8E5;
+}
+
 
 body {
     background-color: #f0f4f8;
