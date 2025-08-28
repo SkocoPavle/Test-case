@@ -5,12 +5,6 @@
         <title>Limco Logistics</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="firstPage.css">
-        <script
-        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete"
-        async
-        defer
-        ></script>
-
     </head>
 
     <body>
@@ -126,6 +120,40 @@
                 <button type="submit" class="submit-btn">Search Rates</button>
             </form>
         </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-text">
+                <img class="logo-pic" alt="logo" src="img/logo-blue-1.svg">
+                <div class="par">
+                    <p class="about-shipping">Ready to get a</p>
+                    <p class="about-shipping">Shipping Quote?</p>
+                </div>
+                <div class="par2">
+                    <p class="bellow-shipping">Get your personalized ocean freight estimated today.</p>
+                    <p class="bellow-shipping">Fill out the form - our team will find the best solution for your cargo.</p>
+                </div>
+            </div>
+
+            <div class="popup-form">
+                <div class="from">
+                    <p class="form-name">Name *</p>
+                    <input placeholder="Enter your name" class="ps">
+                </div>
+
+                <div class="from">
+                    <p class="form-name">Phone *</p>
+                    <input placeholder="Enter your phone" class="ps">
+                </div>
+
+                <div class="from">
+                    <p class="form-name">Email *</p>
+                    <input placeholder="Enter your email" class="ps">
+                </div>
+
+                <button class="track-button">Track Shipment</button>
+            </div>
+        </div>
+
         <script src="firstPage.js"></script>
     </body>
 </html>

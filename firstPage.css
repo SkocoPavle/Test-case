@@ -145,7 +145,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 760px;
+    height: 800px;
     overflow: hidden;
     background-color: #03132c;
     z-index: -1;
@@ -204,7 +204,7 @@ nav {
 .big-text {
     position: relative;
     left: 100px;
-    top: 70px;
+    top: 100px;
 }
 
 .paragraph1 {
@@ -339,21 +339,95 @@ input:focus, select:focus {
 }
 
 .submit-btn {
-  padding: 12px;
-  font-size: 16px;
+  padding: 5px;
+  font-size: 20px;
   color: #fff;
-  background-color: #03132c;
+  background-color: #048bc5;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  width: 200px;
+  margin-left: 10px;
 }
 
-.submit-btn:hover {
-  background-color: #82C8E5;
+.popup {
+    position: fixed; 
+    top: 50px; 
+    right: 00px; 
+    width: 100%; 
+    height: 400px; 
+    background-color: #048bc5; 
+    color: white;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    transition: right 0.5s ease; z-index: 1000;
+    right: -100%; 
+    transition: right 0.5s ease; 
+} 
+    .popup { 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+        background-color: #048bc5; 
+        color: white; width: 100%; 
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+.popup.show {
+    right: 0; 
+}
+.popup .popup-text {
+    width: 45%;
+}
+.popup .popup-form {
+    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
+.popup-form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
+.logo-pic {
+    filter: brightness(0) invert(1);
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.par {
+    margin-top: 20px;
+}
+
+.about-shipping{
+    font-size: 50px;
+    margin-left: 200px;
+}
+
+.par2{
+    margin-top: 10px;
+    margin-left: 200px;
+    width: 300px;
+}
+
+.track-button {
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
 body {
     background-color: #f0f4f8;
 }
