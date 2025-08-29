@@ -441,11 +441,11 @@ input:focus, select:focus {
     display: flex;
     flex-direction: column; 
     overflow-y: auto;       
-    scroll-snap-type: y mandatory;
     height: 100vh;       
     gap: 50px;  
     margin-top: 50px;
-    padding-top: 70px;          
+    padding-top: 70px;
+    scroll-padding-top: 80px;          
 }
 
 .slider-container > div {
@@ -464,7 +464,8 @@ input:focus, select:focus {
     gap: 15px;
     position: sticky;
     z-index: 5;
-    top: 0;  
+    top: 5px;
+    background-color: wheat;  
 }
 
 .lcl-button, .fcl-button, .roro-button, .refigrerated-button {
