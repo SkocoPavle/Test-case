@@ -439,7 +439,7 @@ input:focus, select:focus {
 }
 
 .header-of-the-options-page {
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .options-buttons {
@@ -475,7 +475,7 @@ input:focus, select:focus {
 }
 
 .lcl-div-head {
-    font-size: 34px;
+    font-size: 40px;
     width: 500px;
 }
 
@@ -511,7 +511,7 @@ input:focus, select:focus {
     position: absolute;
     margin-top: 0px;
     margin-left: 600px;
-    height: 600px;
+    height: 650px;
     width: 600px;
 }
 
