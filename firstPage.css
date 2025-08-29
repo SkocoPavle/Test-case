@@ -428,8 +428,123 @@ input:focus, select:focus {
     font-weight: bold;
     cursor: pointer;
 }
-body {
-    background-color: #f0f4f8;
+
+.ocean-options {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 200px;
 }
 
-/* com*/
+.header-of-the-options-page {
+    font-size: 70px;
+}
+
+.options-buttons {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.lcl-button, .fcl-button, .roro-button, .refigrerated-button {
+    height: 40px;
+    width: 200px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid black;
+}
+
+.refigrerated-button {
+    width: 250px;
+}
+
+.roro-button {
+    width: 220px;
+}
+
+.lcl-div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 1150px;
+    margin-top: 50px;
+}
+
+.lcl-div-head {
+    font-size: 34px;
+    width: 500px;
+}
+
+.lcl-text-div {
+    color: black;
+    margin-top: 50px;
+    width: 450px;
+    font-size: 24px;
+
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-pic {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.feature-text {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.people-pic {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 600px;
+    height: 600px;
+    width: 600px;
+}
+
+.btns {
+    display: flex;
+    position: relative;
+    top: 50px;
+    left: -350px;
+    gap: 50px;
+}
+
+.request-button {
+    height: 50px;
+    width: 200px;
+    background-color: #048bc5;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.learn-button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body {
+    background-color: #fff;
+}
