@@ -44,32 +44,10 @@ trackBtn.addEventListener('click', () => {
     popup.classList.remove('show');
 });
 
-// Dugmad i slajdovi za Ocean Options
-const slideButtons = document.querySelectorAll('.options-buttons button');
-const slides = document.querySelectorAll('.slider-container > div');
+const container = document.querySelector('.container');
 
-// Funkcija koja uklanja "active" sa svih dugmadi
-function removeActive() {
-    slideButtons.forEach(btn => btn.classList.remove('active'));
-}
-
-// Klikom na dugme scroll do slajda i promena aktivnog dugmeta
-slideButtons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        slides[index].scrollIntoView({ behavior: 'smooth' });
-        removeActive();
-        btn.classList.add('active');
-    });
+container.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  container.scrollTop -= e.deltaY; // scroll od bottoma ka topu
 });
 
-// Menjanje aktivnog dugmeta prilikom scrolla
-const sliderContainer = document.querySelector('.slider-container');
-sliderContainer.addEventListener('scroll', () => {
-    slides.forEach((slide, index) => {
-        const rect = slide.getBoundingClientRect();
-        if(rect.top >= 0 && rect.top < window.innerHeight / 2) {
-            removeActive();
-            slideButtons[index].classList.add('active');
-        }
-    });
-});

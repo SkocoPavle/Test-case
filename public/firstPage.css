@@ -429,148 +429,57 @@ input:focus, select:focus {
     cursor: pointer;
 }
 
-.ocean-options {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    top: 200px;
-}
-.slider-container {
-    display: flex;
-    flex-direction: column; 
-    overflow-y: auto;       
-    height: 100vh;       
-    gap: 50px;  
-    margin-top: 50px;
-    padding-top: 70px;
-    scroll-padding-top: 80px;          
+.container {
+  width: 90%;
+  max-width: 600px;
+  height: 500px;           /* visina feed-a */
+  margin: 50px auto;
+  overflow: hidden;        /* sakriva sve što izlazi van kontejnera */
+  border: 1px solid #ccc;
+  position: relative;
 }
 
-.slider-container > div {
-    scroll-snap-align: start;
-    min-height: 100vh;     
-    position: relative;     
+/* Pojedinačni slide zauzima celu visinu kontejnera */
+.slide {
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse; /* slajd dolazi odozdo prema gore */
+  justify-content: flex-end;
+  border-bottom: 1px solid #ddd;
+  background: #f9f9f9;
 }
 
-.header-of-the-options-page {
-    font-size: 50px;
+/* Prvi header ostaje na vrhu kontejnera */
+.first-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  z-index: 20;
 }
 
-.options-buttons {
-    margin-top: 50px;
-    display: flex;
-    gap: 15px;
-    position: sticky;
-    z-index: 5;
-    top: 5px;
-    background-color: wheat;  
+/* Ostali headeri se naslanjaju ispod prvog */
+.slide-header:not(.first-header) {
+  position: absolute;
+  width: 100%;
+  background: white;
+  padding: 8px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  z-index: 15;
 }
 
-.lcl-button, .fcl-button, .roro-button, .refigrerated-button {
-    height: 40px;
-    width: 200px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    outline: none;
-    border: 1px solid black;
-    position: sticky;
-}
+.slide:nth-child(2) .slide-header { top: 50px; }
+.slide:nth-child(3) .slide-header { top: 90px; }
 
-.refigrerated-button {
-    width: 250px;
-}
-
-.roro-button {
-    width: 220px;
-}
-
-.lcl-div {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    width: 1150px;
-    margin-top: 0px;
-}
-
-.lcl-div-head {
-    font-size: 40px;
-    width: 500px;
-}
-
-.lcl-text-div {
-    color: black;
-    margin-top: 50px;
-    width: 450px;
-    font-size: 24px;
-
-}
-
-.features {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.feature-pic {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.feature-text {
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: bold;
-    width: 150px;
-}
-
-.people-pic {
-    position: relative;
-    margin-top: -550px;
-    margin-left: 550px;
-    height: 650px;
-    width: 600px;
-}
-
-.btns {
-    display: flex;
-    position: relative;
-    top: 50px;
-    left: 20px;
-    gap: 50px;
-}
-
-.request-button {
-    height: 50px;
-    width: 200px;
-    background-color: #048bc5;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.learn-button {
-    height: 50px;
-    width: 150px;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-}
-.options-buttons button.active {
-    background-color: black;
-    color: white;
-}
-
-
-body {
-    background-color: #fff;
+.slide-content {
+  padding: 20px;
+  margin-top: 50px; /* prostor za prvi header */
+  flex: 1;
 }
