@@ -437,6 +437,21 @@ input:focus, select:focus {
     justify-content: center;
     top: 200px;
 }
+.slider-container {
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;       
+    scroll-snap-type: y mandatory;
+    height: 100vh;       
+    gap: 50px;  
+    margin-top: 50px;          
+}
+
+.slider-container > div {
+    scroll-snap-align: start;
+    min-height: 100vh;     
+    position: relative;     
+}
 
 .header-of-the-options-page {
     font-size: 50px;
@@ -471,7 +486,7 @@ input:focus, select:focus {
     flex-direction: column;
     align-items: left;
     width: 1150px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .lcl-div-head {
@@ -508,9 +523,9 @@ input:focus, select:focus {
 }
 
 .people-pic {
-    position: absolute;
-    margin-top: 0px;
-    margin-left: 600px;
+    position: relative;
+    margin-top: -500px;
+    margin-left: 550px;
     height: 650px;
     width: 600px;
 }
