@@ -50,4 +50,6 @@ container.addEventListener('wheel', (e) => {
   e.preventDefault();
   container.scrollTop -= e.deltaY; // scroll od bottoma ka topu
 });
+const slides = document.querySelectorAll('.slide');
+
 
